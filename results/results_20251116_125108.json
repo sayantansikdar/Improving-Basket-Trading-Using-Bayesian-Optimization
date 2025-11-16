@@ -1,0 +1,76 @@
+{
+  "config": {
+    "assets": [
+      "AAPL",
+      "MSFT",
+      "GOOGL"
+    ],
+    "start_date": "2020-01-01",
+    "end_date": "2023-12-31",
+    "n_trials": 30,
+    "entry_threshold": 2.0,
+    "exit_threshold": 0.5,
+    "transaction_cost": 0.001,
+    "metric": "sharpe",
+    "multi_objective": false
+  },
+  "weights": {
+    "johansen": [
+      -1.2765395181495724,
+      2.48842848840141,
+      -1.0
+    ],
+    "bo": [
+      1.0211453188266875,
+      -0.021145318826687534,
+      -1.0
+    ]
+  },
+  "full_sample_metrics": {
+    "johansen": {
+      "total_return": -0.7361989419673888,
+      "sharpe_ratio": -1.188390145826923,
+      "max_drawdown": 0.750978357973323,
+      "profit_factor": 0.7014142459498559,
+      "half_life": 43.321279771040786,
+      "num_trades": 41,
+      "win_rate": 0.4289772727272727
+    },
+    "bo": {
+      "total_return": 0.2050694160892983,
+      "sharpe_ratio": 0.3408019537646616,
+      "max_drawdown": 0.3019478051722808,
+      "profit_factor": 1.0986438197720696,
+      "half_life": 90.2164380980451,
+      "num_trades": 27,
+      "win_rate": 0.498960498960499
+    }
+  },
+  "rolling_window_comparison": {
+    "johansen": {
+      "mean_sharpe": -1.3242261554834813,
+      "std_sharpe": 0.5517545607204393,
+      "mean_max_drawdown": 0.322105630692644,
+      "mean_profit_factor": 0.6447932387250168,
+      "mean_total_return": -0.25834140604746497,
+      "mean_half_life": 22.849726613847373
+    },
+    "bo": {
+      "mean_sharpe": -0.2376973513536101,
+      "std_sharpe": 0.7116068376773951,
+      "mean_max_drawdown": 0.13588316669339248,
+      "mean_profit_factor": 0.9821031544816299,
+      "mean_total_return": -0.04246636619113005,
+      "mean_half_life": 40.33652046311238
+    },
+    "improvement": {
+      "sharpe_improvement": 0.8205009390810397,
+      "drawdown_reduction": 0.5781409769174343,
+      "return_improvement": 0.8356192031279426
+    }
+  },
+  "johansen_stats": {
+    "trace_statistic": 19.460361103131397,
+    "eigenvalue_statistic": 12.54913310674473
+  }
+}
